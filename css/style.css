@@ -1,0 +1,48 @@
+/*
+ font-family: 'Cabin', sans-serif;
+font-family: 'Tajawal', sans-serif;
+*/
+
+*{
+	font-family: 'Tajawal', sans-serif;
+}
+
+#profil{
+	display: inline-block;
+	width: 700PX;
+	height: 700px;
+	border: solid 4px rgba(0,0,0,0.8);
+	border-radius: 50%;
+	background: url(../img/yeuxVert.png) -1050px 2300px;
+	transform : scale(0.5); 
+	padding: 0px;
+	margin: -150px;
+}
+
+h1,h2,h3{
+	color: rgba(0,0,0,0.8);
+	font-family: 'Cabin', sans-serif;
+}
+
+h1{
+	font-size: 4em;
+}
+p{
+	color: rgba(0,0,0,0.8);
+	font-size: 1.6em;
+}
+div{
+	margin-bottom: 0px;
+}
+main {
+	background-color:rgba(128, 0, 0,0.8);//#FFE4BA; //#FFDAB9; 
+	text-align: center;
+	min-height: 600px;
+	margin: 0px auto ;
+	padding: 10px;
+}
+
+#contact{
+	width: 50%;
+	margin: 0px auto;
+}

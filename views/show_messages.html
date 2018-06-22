@@ -1,0 +1,40 @@
+<?php include 'header.PHP'; ?>
+
+
+<body>
+
+	<main>
+
+		<?php
+
+		 if (!isset($_SESSION['auth']) || $_SESSION['auth'] == []) {
+		 	$_SESSION['flash']['danger'] = 'First login, would you?';
+			header("Location: Login.php");
+			exit();
+		} 
+
+		if (isset($_SESSION['flash'])) {
+	
+			foreach ($_SESSION['flash'] as $type => $message) {
+				
+				echo '<div class="alert alert-'.$type.'" style="margin-bottom: 0px"><ul><li>'.$message.'</li></ul></div>';
+			}
+
+			unset($_SESSION["flash"]);
+		}
+
+	?>
+		
+		<?php foreach($messages as $m):?>	
+
+			<h3><small>From :</small><?php echo $m->pseudo ?></h3>
+
+			<p><?php echo $m->message ?> <small><?php echo $m->time ?></small></p>
+
+		<?php endforeach; ?>
+		
+	</main>
+	
+
+</body>
+
